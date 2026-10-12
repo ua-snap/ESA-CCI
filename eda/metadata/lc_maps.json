@@ -1,0 +1,143 @@
+{
+  "title": "Land cover maps (LCCS), 300 m annual, v2.0.7",
+  "theme": "land_cover",
+  "archive_path": "/neodc/esacci/land_cover/data/land_cover_maps/v2.0.7",
+  "catalogue": "https://catalogue.ceda.ac.uk/uuid/b382ebe6679d44b8b0e68ea4ef4b701c/",
+  "manifest": {
+    "n_files": 24,
+    "total_bytes": 61072144387,
+    "total_human": "56.9 GB",
+    "median_file_human": "2.4 GB",
+    "first_year": 1992,
+    "last_year": 2015,
+    "dir_patterns": [
+      "."
+    ],
+    "example_files": [
+      "ESACCI-LC-L4-LCCS-Map-300m-P1Y-1992-v2.0.7b.nc",
+      "ESACCI-LC-L4-LCCS-Map-300m-P1Y-2015-v2.0.7b.nc"
+    ]
+  },
+  "remote": true,
+  "sample": {
+    "sample": "https://dap.ceda.ac.uk/neodc/esacci/land_cover/data/land_cover_maps/v2.0.7/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2010-v2.0.7b.nc",
+    "dims": {
+      "lat": 64800,
+      "lon": 129600
+    },
+    "grid": {
+      "lat": {
+        "size": 64800,
+        "first": 89.99861145019531,
+        "last": -89.99861145019531,
+        "step": -0.002776999957859516
+      },
+      "lon": {
+        "size": 129600,
+        "first": -179.9986114501953,
+        "last": 179.9986114501953,
+        "step": 0.002776999957859516
+      }
+    },
+    "time_in_sample": null,
+    "crs": {
+      "grid_mapping_var": "crs",
+      "epsg": null,
+      "name": "WGS 84",
+      "geotransform": null
+    },
+    "variables": [
+      {
+        "name": "lccs_class",
+        "dims": [
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "Land cover class defined in LCCS",
+        "standard_name": "land_cover_lccs",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": "0",
+        "flag_meanings": "no_data cropland_rainfed cropland_rainfed_herbaceous_cover cropland_rainfed_tree_or_shrub_cover cropland_irrigated mosaic_cropland mosaic_natural_vegetation tree_broadleaved_evergreen_closed_to_open tree_broadleaved_deciduous_closed_to_open tree_broadleaved_deciduous_closed tree_broadleaved_deciduous_open tree_needleleaved_evergreen_closed_to_open tree_needleleaved_evergreen_closed tree_needleleaved_evergreen_open tree_needleleaved_deciduous_closed_to_open tree_needleleaved_deciduous_closed tree_needleleaved_deciduous_open tree_mixed mosaic_tree_and_shrub mosaic_herbaceous shrubland shrubland_evergreen shrubland_deciduous grassland lichens_and_mosses sparse_vegetation sparse_tree sparse_shrub sparse_herbaceous tree_cover_flooded_fresh_or_brakish_water tree_cover_flooded_saline_water shrub_or_herbaceous_cover_flooded urban bare_areas bare_areas_consolidated bare_areas_unconsolidated water snow_and_ice"
+      },
+      {
+        "name": "processed_flag",
+        "dims": [
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "LC map processed area flag",
+        "standard_name": "land_cover_lccs status_flag",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": "-1",
+        "flag_meanings": "not_processed processed"
+      },
+      {
+        "name": "current_pixel_state",
+        "dims": [
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "LC pixel type mask",
+        "standard_name": "land_cover_lccs status_flag",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": "-1",
+        "flag_meanings": "invalid clear_land clear_water clear_snow_ice cloud cloud_shadow"
+      },
+      {
+        "name": "observation_count",
+        "dims": [
+          "lat",
+          "lon"
+        ],
+        "dtype": "int16",
+        "units": "",
+        "long_name": "number of valid observations",
+        "standard_name": "land_cover_lccs number_of_observations",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": "-1",
+        "flag_meanings": ""
+      },
+      {
+        "name": "change_count",
+        "dims": [
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "number of class changes",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": "-1",
+        "flag_meanings": ""
+      }
+    ],
+    "global_attrs": {
+      "title": "ESA CCI Land Cover Map",
+      "summary": "This dataset contains the global ESA CCI land cover classification map derived from satellite data of one epoch.",
+      "institution": "Universite catholique de Louvain",
+      "source": "MERIS FR L1B version 5.05, MERIS RR L1B version 8.0, SPOT VGT P",
+      "spatial_resolution": "300m",
+      "geospatial_lat_min": "-90.0",
+      "geospatial_lat_max": "90.0",
+      "geospatial_lon_min": "-180.0",
+      "geospatial_lon_max": "180.0",
+      "time_coverage_start": "20100101",
+      "time_coverage_end": "20101231",
+      "product_version": "2.0.7",
+      "license": "ESA CCI Data Policy: free and open access",
+      "references": "http://www.esa-landcover-cci.org/"
+    }
+  }
+}

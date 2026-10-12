@@ -218,3 +218,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Claude Code working files (session notes, task tracking)
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+
+# Downloaded data never lives in the repo
+data/
+*.nc
+*.zarr/

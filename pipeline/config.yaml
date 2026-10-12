@@ -1,0 +1,90 @@
+# Paths, products and subset domain for the ESA CCI pipeline.
+# Archive paths are relative to https://dap.ceda.ac.uk (CEDA, open access, no login).
+
+data_root: /import/beegfs/CMIP6/jdpaul3/esa-cci
+raw_dir: "{data_root}/raw"          # mirror of /neodc/esacci/... below this
+subset_dir: "{data_root}/alaska"    # Alaska native-grid subsets
+manifest_dir: "{data_root}/manifests"  # file lists written by crawl.py
+
+alaska:
+  # Mainland + panhandle + eastern Aleutians with ~1-2 degree buffer.
+  # Western Aleutians (east of the antimeridian, 172E-180) are excluded.
+  bbox: {west: -180.0, south: 50.0, east: -125.0, north: 72.5}
+  years: [2000, 2020]
+
+products:
+  # ---- Permafrost_cci v5.0 (CRDP v4), downloaded in full ----
+  permafrost_alt:
+    theme: permafrost
+    title: Active layer thickness, Northern Hemisphere, v5.0
+    catalogue: https://catalogue.ceda.ac.uk/uuid/a6fbedd8ee5b472c8e84e55f746c1704/
+    archive_path: /neodc/esacci/permafrost/data/active_layer_thickness/L4/area4/pp/v05.0/northern_hemisphere
+    include: [".nc"]
+    download: true
+  permafrost_gt:
+    theme: permafrost
+    title: Ground temperature, Northern Hemisphere, v5.0
+    catalogue: https://catalogue.ceda.ac.uk/uuid/5675b0be944f45a8af0e7ddbeb47a011/
+    archive_path: /neodc/esacci/permafrost/data/ground_temperature/L4/area4/pp/v05.0/northern_hemisphere
+    include: [".nc"]
+    download: true
+  permafrost_pfr:
+    theme: permafrost
+    title: Permafrost extent (fraction), Northern Hemisphere, v5.0
+    catalogue: https://catalogue.ceda.ac.uk/uuid/d235665772ec4b558e9a89ac85595e71/
+    archive_path: /neodc/esacci/permafrost/data/permafrost_extent/L4/area4/pp/v05.0/northern_hemisphere
+    include: [".nc"]
+    download: true
+
+  # ---- Snow_cci v4.0 (CRDP v4), catalog only ----
+  snow_swe:
+    theme: snow
+    title: Snow water equivalent, merged passive microwave, v4.0
+    archive_path: /neodc/esacci/snow/data/swe/MERGED/v4.0
+    include: [".nc"]
+    download: false
+  snow_scfg_modis:
+    theme: snow
+    title: Snow cover fraction on ground, MODIS, v4.0
+    archive_path: /neodc/esacci/snow/data/scfg/MODIS/v4.0
+    include: [".nc"]
+    download: false
+  snow_scfv_modis:
+    theme: snow
+    title: Snow cover fraction viewable, MODIS, v4.0
+    archive_path: /neodc/esacci/snow/data/scfv/MODIS/v4.0
+    include: [".nc"]
+    download: false
+  snow_scfg_avhrr:
+    theme: snow
+    title: Snow cover fraction on ground, AVHRR single-sensor, v4.0
+    archive_path: /neodc/esacci/snow/data/scfg/AVHRR_SINGLE/v4.0
+    include: [".nc"]
+    download: false
+  snow_scfv_avhrr:
+    theme: snow
+    title: Snow cover fraction viewable, AVHRR single-sensor, v4.0
+    archive_path: /neodc/esacci/snow/data/scfv/AVHRR_SINGLE/v4.0
+    include: [".nc"]
+    download: false
+
+  # ---- Land_Cover_cci, catalog only ----
+  lc_maps:
+    theme: land_cover
+    title: Land cover maps (LCCS), 300 m annual, v2.0.7
+    catalogue: https://catalogue.ceda.ac.uk/uuid/b382ebe6679d44b8b0e68ea4ef4b701c/
+    archive_path: /neodc/esacci/land_cover/data/land_cover_maps/v2.0.7
+    include: [".nc"]
+    download: false
+  lc_pft:
+    theme: land_cover
+    title: Plant functional types, 300 m annual, v2.0.81
+    archive_path: /neodc/esacci/land_cover/data/pft/v2.0.81
+    include: [".nc"]
+    download: false
+  lc_water:
+    theme: land_cover
+    title: Water bodies, 150 m static, v4.0
+    archive_path: /neodc/esacci/land_cover/data/water_bodies/v4.0
+    include: [".nc"]
+    download: false

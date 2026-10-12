@@ -1,0 +1,83 @@
+{
+  "title": "Water bodies, 150 m static, v4.0",
+  "theme": "land_cover",
+  "archive_path": "/neodc/esacci/land_cover/data/water_bodies/v4.0",
+  "catalogue": null,
+  "manifest": {
+    "n_files": 1,
+    "total_bytes": 132860800,
+    "total_human": "126.7 MB",
+    "median_file_human": "126.7 MB",
+    "first_year": 2000,
+    "last_year": 2000,
+    "dir_patterns": [
+      "."
+    ],
+    "example_files": [
+      "ESACCI-LC-L4-WB-Map-150m-P13Y-2000-v4.0.nc",
+      "ESACCI-LC-L4-WB-Map-150m-P13Y-2000-v4.0.nc"
+    ]
+  },
+  "remote": true,
+  "sample": {
+    "sample": "https://dap.ceda.ac.uk/neodc/esacci/land_cover/data/water_bodies/v4.0/ESACCI-LC-L4-WB-Map-150m-P13Y-2000-v4.0.nc",
+    "dims": {
+      "lat": 129600,
+      "lon": 259200
+    },
+    "grid": {
+      "lat": {
+        "size": 129600,
+        "first": 89.99930572509766,
+        "last": -89.9992904663086,
+        "step": -0.0013889999827370048
+      },
+      "lon": {
+        "size": 259200,
+        "first": -179.99929809570312,
+        "last": 179.99928283691406,
+        "step": 0.0013889999827370048
+      }
+    },
+    "time_in_sample": null,
+    "crs": {
+      "grid_mapping_var": "crs",
+      "epsg": null,
+      "name": "WGS 84",
+      "geotransform": null
+    },
+    "variables": [
+      {
+        "name": "wb_class",
+        "dims": [
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "terrestrial or water pixel classification",
+        "standard_name": "land_cover_lccs",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": "0",
+        "flag_meanings": "terrestrial water"
+      }
+    ],
+    "global_attrs": {
+      "title": "ESA CCI Land Cover Water Bodies Map",
+      "summary": "This dataset contains the global ESA CCI land cover water bodies map derived from satellite data.",
+      "institution": "Universite catholique de Louvain",
+      "source": "ASAR",
+      "spatial_resolution": "150m",
+      "geospatial_lat_min": "-89.999985",
+      "geospatial_lat_max": "90.0",
+      "geospatial_lon_min": "-180.0",
+      "geospatial_lon_max": "179.99997",
+      "time_coverage_start": "20000101",
+      "time_coverage_end": "20121231",
+      "product_version": "4.0",
+      "license": "ESA CCI Data Policy: free and open access",
+      "references": "http://www.esa-landcover-cci.org/"
+    }
+  }
+}

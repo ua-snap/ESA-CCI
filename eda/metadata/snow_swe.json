@@ -1,0 +1,108 @@
+{
+  "title": "Snow water equivalent, merged passive microwave, v4.0",
+  "theme": "snow",
+  "archive_path": "/neodc/esacci/snow/data/swe/MERGED/v4.0",
+  "catalogue": null,
+  "manifest": {
+    "n_files": 9575,
+    "total_bytes": 14570783916,
+    "total_human": "13.6 GB",
+    "median_file_human": "1.5 MB",
+    "first_year": 1979,
+    "last_year": 2023,
+    "dir_patterns": [
+      "{YYYY}/{MM}"
+    ],
+    "example_files": [
+      "19790102-ESACCI-L3C_SNOW-SWE-SMMR_NIMBUS7-fv4.0.nc",
+      "20231231-ESACCI-L3C_SNOW-SWE-SSMIS_DMSP-fv4.0.nc"
+    ]
+  },
+  "remote": true,
+  "sample": {
+    "sample": "https://dap.ceda.ac.uk/neodc/esacci/snow/data/swe/MERGED/v4.0/2010/03/20100315-ESACCI-L3C_SNOW-SWE-SSMIS_DMSP-fv4.0.nc",
+    "dims": {
+      "lat": 1800,
+      "nv": 2,
+      "lon": 3600,
+      "time": 1
+    },
+    "grid": {
+      "lat": {
+        "size": 1800,
+        "first": -89.95,
+        "last": 89.94999999998977,
+        "step": 0.1
+      },
+      "lon": {
+        "size": 3600,
+        "first": -179.95,
+        "last": 179.94999999997953,
+        "step": 0.1
+      }
+    },
+    "time_in_sample": [
+      "2010-03-15T00:00:00",
+      "2010-03-15T00:00:00"
+    ],
+    "crs": {
+      "grid_mapping_var": "spatial_ref",
+      "epsg": 4326,
+      "name": "WGS 84",
+      "geotransform": "0 0.1 0 180 0 -0.1"
+    },
+    "variables": [
+      {
+        "name": "swe",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "int32",
+        "units": "mm",
+        "long_name": "Snow Water Equivalent",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": "-100000",
+        "flag_meanings": "Glacier Mountain Water no_data no_snow"
+      },
+      {
+        "name": "swe_std",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "int32",
+        "units": "mm",
+        "long_name": "statistical standard deviation of estimate",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": "-100000",
+        "flag_meanings": "Glacier Mountain Water no_data no_snow"
+      }
+    ],
+    "global_attrs": {
+      "title": "ESA CCI snow SWE product level L3C daily, Dynamic snow densities, CryoClim snow melt masks",
+      "summary": "The ESA CCI Snow SWE product provides daily information on mass of the snow cover. Snow water equivalent (swe) is measure of the ammount of water contained within a snow pack and is provided in mm, similar to precipitation information. The product is based on low resolution passive microwave satellite data combined with in-situ snow depth measurements and is provided resampled to 0.10 degree latitude longitude grid. Information is provided on all land areas on Northern hemisphere excluding mountainous regions, glaciers and Greenland that have been masked from the product. The SWE estimates are complemented with statistically derived accuracy estimate accompanying each SWE estimate (on a pixel level).",
+      "institution": "FMI",
+      "source": "SSMIS brightness temperature data from 19 & 37GHz channels. WMO synoptic in-situ snow depth measurements, daily averages",
+      "platform": "DMSP F17",
+      "sensor": "SSMI/S",
+      "spatial_resolution": "0.10 degree",
+      "geospatial_lat_min": "-90",
+      "geospatial_lat_max": "90",
+      "geospatial_lon_min": "-180",
+      "geospatial_lon_max": "180",
+      "time_coverage_start": "20100315T000000Z",
+      "time_coverage_end": "20100315T235959Z",
+      "product_version": "4.0",
+      "doi": "10.5285/edf8abd23f4a40aabd4d52e48dec06ea",
+      "license": "ESA CCI Data Policy: free and open access",
+      "references": "http://snow-cci.enveo.at/"
+    }
+  }
+}

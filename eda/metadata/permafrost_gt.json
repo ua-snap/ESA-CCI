@@ -1,0 +1,241 @@
+{
+  "title": "Ground temperature, Northern Hemisphere, v5.0",
+  "theme": "permafrost",
+  "archive_path": "/neodc/esacci/permafrost/data/ground_temperature/L4/area4/pp/v05.0/northern_hemisphere",
+  "catalogue": "https://catalogue.ceda.ac.uk/uuid/5675b0be944f45a8af0e7ddbeb47a011/",
+  "manifest": {
+    "n_files": 27,
+    "total_bytes": 9775332725,
+    "total_human": "9.1 GB",
+    "median_file_human": "345.5 MB",
+    "first_year": 1997,
+    "last_year": 2023,
+    "dir_patterns": [
+      "{YYYY}"
+    ],
+    "example_files": [
+      "ESACCI-PERMAFROST-L4-GTD-ERA5_MODISLST_BIASCORRECTED-AREA4_PP-1997-fv05.0.nc",
+      "ESACCI-PERMAFROST-L4-GTD-MODISLST_CRYOGRID-AREA4_PP-2023-fv05.0.nc"
+    ]
+  },
+  "remote": false,
+  "sample": {
+    "sample": "/import/beegfs/CMIP6/jdpaul3/esa-cci/raw/permafrost/data/ground_temperature/L4/area4/pp/v05.0/northern_hemisphere/2010/ESACCI-PERMAFROST-L4-GTD-MODISLST_CRYOGRID-AREA4_PP-2010-fv05.0.nc",
+    "dims": {
+      "time": 1,
+      "lat": 6000,
+      "lon": 36000
+    },
+    "grid": {
+      "lat": {
+        "size": 6000,
+        "first": 25.0049991607666,
+        "last": 84.99498748779297,
+        "step": 0.009995000436902046
+      },
+      "lon": {
+        "size": 36000,
+        "first": -179.9949951171875,
+        "last": 179.9949951171875,
+        "step": 0.010002000257372856
+      }
+    },
+    "time_in_sample": [
+      "2010-01-01T00:00:00",
+      "2010-01-01T00:00:00"
+    ],
+    "crs": {
+      "grid_mapping_var": "spatial_ref",
+      "epsg": 4326,
+      "name": "WGS 84",
+      "geotransform": "-180 0.01 0 90 0 -0.01"
+    },
+    "variables": [
+      {
+        "name": "GST",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "uint16",
+        "units": "degrees celsius",
+        "long_name": "surface_temperature",
+        "standard_name": "surface_temperature",
+        "scale_factor": 0.01,
+        "add_offset": -273.15,
+        "fill_value": "65535",
+        "flag_meanings": ""
+      },
+      {
+        "name": "GST_uncertainty",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "uint16",
+        "units": "degrees celsius",
+        "long_name": "spatial uncertainty (variability within pixel) of ground surface temperature",
+        "standard_name": "",
+        "scale_factor": 0.01,
+        "add_offset": -273.15,
+        "fill_value": "65535",
+        "flag_meanings": ""
+      },
+      {
+        "name": "T1m",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "uint16",
+        "units": "degrees celsius",
+        "long_name": "temperature_in_ground",
+        "standard_name": "temperature_in_ground",
+        "scale_factor": 0.01,
+        "add_offset": -273.15,
+        "fill_value": "65535",
+        "flag_meanings": ""
+      },
+      {
+        "name": "T1m_uncertainty",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "uint16",
+        "units": "degrees celsius",
+        "long_name": "spatial uncertainty (variability within pixel) of ground temperature at 1.0m depth",
+        "standard_name": "",
+        "scale_factor": 0.01,
+        "add_offset": -273.15,
+        "fill_value": "65535",
+        "flag_meanings": ""
+      },
+      {
+        "name": "T2m",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "uint16",
+        "units": "degrees celsius",
+        "long_name": "temperature_in_ground",
+        "standard_name": "temperature_in_ground",
+        "scale_factor": 0.01,
+        "add_offset": -273.15,
+        "fill_value": "65535",
+        "flag_meanings": ""
+      },
+      {
+        "name": "T2m_uncertainty",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "uint16",
+        "units": "degrees celsius",
+        "long_name": "spatial uncertainty (variability within pixel) of ground temperature at 2.0m depth",
+        "standard_name": "",
+        "scale_factor": 0.01,
+        "add_offset": -273.15,
+        "fill_value": "65535",
+        "flag_meanings": ""
+      },
+      {
+        "name": "T5m",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "uint16",
+        "units": "degrees celsius",
+        "long_name": "temperature_in_ground",
+        "standard_name": "temperature_in_ground",
+        "scale_factor": 0.01,
+        "add_offset": -273.15,
+        "fill_value": "65535",
+        "flag_meanings": ""
+      },
+      {
+        "name": "T5m_uncertainty",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "uint16",
+        "units": "degrees celsius",
+        "long_name": "spatial uncertainty (variability within pixel) of ground temperature at 5.0m depth",
+        "standard_name": "",
+        "scale_factor": 0.01,
+        "add_offset": -273.15,
+        "fill_value": "65535",
+        "flag_meanings": ""
+      },
+      {
+        "name": "T10m",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "uint16",
+        "units": "degrees celsius",
+        "long_name": "temperature_in_ground",
+        "standard_name": "temperature_in_ground",
+        "scale_factor": 0.01,
+        "add_offset": -273.15,
+        "fill_value": "65535",
+        "flag_meanings": ""
+      },
+      {
+        "name": "T10m_uncertainty",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "uint16",
+        "units": "degrees celsius",
+        "long_name": "spatial uncertainty (variability within pixel) of ground temperature at 10.0m depth",
+        "standard_name": "",
+        "scale_factor": 0.01,
+        "add_offset": -273.15,
+        "fill_value": "65535",
+        "flag_meanings": ""
+      }
+    ],
+    "global_attrs": {
+      "title": "CCI Permafrost ground temperature",
+      "summary": "ESA CCI Permafrost product level 4",
+      "institution": "University of Oslo",
+      "source": "MODIS MOD11A1 and MYD11A1 level 3 Collection 6, ESA CCI Land Cover dataset v1.6.1, ERA5 Reanalysis",
+      "platform": "Aqua, Terra, Envisat, PROBA-V, Sentinel-1, Sentinel-2",
+      "sensor": "MODIS, MERIS, VGT, C-SAR, MSI",
+      "geospatial_lat_min": "25",
+      "geospatial_lat_max": "85",
+      "geospatial_lon_min": "-180",
+      "geospatial_lon_max": "180",
+      "time_coverage_start": "20100101T000000Z",
+      "time_coverage_end": "20101231T235959Z",
+      "product_version": "05.0",
+      "license": "ESA CCI Data Policy: free and open access",
+      "references": "http://cci.esa.int/Permafrost, https://doi.org/10.5194/gmd-9-523-2016"
+    }
+  },
+  "local": {
+    "raw_dir": "/import/beegfs/CMIP6/jdpaul3/esa-cci/raw/permafrost/data/ground_temperature/L4/area4/pp/v05.0/northern_hemisphere",
+    "raw_files": 27,
+    "raw_human": "9.1 GB",
+    "subset_dir": "/import/beegfs/CMIP6/jdpaul3/esa-cci/alaska/permafrost_gt",
+    "subset_files": 21,
+    "subset_human": "765.4 MB"
+  }
+}

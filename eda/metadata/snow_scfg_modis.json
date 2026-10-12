@@ -1,0 +1,140 @@
+{
+  "title": "Snow cover fraction on ground, MODIS, v4.0",
+  "theme": "snow",
+  "archive_path": "/neodc/esacci/snow/data/scfg/MODIS/v4.0",
+  "catalogue": null,
+  "manifest": {
+    "n_files": 8642,
+    "total_bytes": 879557186589,
+    "total_human": "819.2 GB",
+    "median_file_human": "96.2 MB",
+    "first_year": 2000,
+    "last_year": 2023,
+    "dir_patterns": [
+      "{YYYY}/{MM}"
+    ],
+    "example_files": [
+      "20000224-ESACCI-L3C_SNOW-SCFG-MODIS_TERRA-fv4.0.nc",
+      "20231231-ESACCI-L3C_SNOW-SCFG-MODIS_TERRA-fv4.0.nc"
+    ]
+  },
+  "remote": true,
+  "sample": {
+    "sample": "https://dap.ceda.ac.uk/neodc/esacci/snow/data/scfg/MODIS/v4.0/2010/03/20100315-ESACCI-L3C_SNOW-SCFG-MODIS_TERRA-fv4.0.nc",
+    "dims": {
+      "lat": 18000,
+      "nv": 2,
+      "lon": 36000,
+      "time": 1
+    },
+    "grid": {
+      "lat": {
+        "size": 18000,
+        "first": -89.995,
+        "last": 89.995,
+        "step": 0.01
+      },
+      "lon": {
+        "size": 36000,
+        "first": -179.995,
+        "last": 179.995,
+        "step": 0.01
+      }
+    },
+    "time_in_sample": [
+      "2010-03-15T00:00:00",
+      "2010-03-15T00:00:00"
+    ],
+    "crs": {
+      "grid_mapping_var": "spatial_ref",
+      "epsg": 4326,
+      "name": "WGS 84",
+      "geotransform": "-180 0.01 0 90 0 -0.01"
+    },
+    "variables": [
+      {
+        "name": "scfg",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "uint8",
+        "units": "percent",
+        "long_name": "Snow Cover Fraction on Ground",
+        "standard_name": "surface_snow_area_fraction",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": "255",
+        "flag_meanings": "Cloud Polar_Night_or_Night Water Salt_Lake Permanent_Snow_and_Ice Classification_failed Input_Data_Error No_Satellite_Acquisition"
+      },
+      {
+        "name": "scfg_unc",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "uint8",
+        "units": "percent",
+        "long_name": "Unbiased Root Mean Square Error for Snow Cover Fraction on Ground",
+        "standard_name": "surface_snow_area_fraction standard_error",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": "255",
+        "flag_meanings": "Cloud Polar_Night_or_Night Water Salt_Lake Permanent_Snow_and_Ice Classification_failed Input_Data_Error No_Satellite_Acquisition"
+      },
+      {
+        "name": "satzen",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "uint16",
+        "units": "degrees",
+        "long_name": "Sensor Zenith Angle",
+        "standard_name": "sensor_zenith_angle",
+        "scale_factor": 0.01,
+        "add_offset": 0.0,
+        "fill_value": "9999",
+        "flag_meanings": ""
+      },
+      {
+        "name": "scanline_time",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "uint16",
+        "units": "h",
+        "long_name": "scanline time as fractional hours of the day",
+        "standard_name": "time",
+        "scale_factor": 0.001,
+        "add_offset": 0.0,
+        "fill_value": "65535",
+        "flag_meanings": ""
+      }
+    ],
+    "global_attrs": {
+      "title": "ESA CCI snow on ground product level L3C daily from MODIS",
+      "summary": "The SCF product provides daily information on snow cover fraction (0 - 100 %) per pixel for global land areas except permanent snow and ice areas with about 1 km pixel size. The product is based on medium resolution optical satellite data. In forested areas, the product provides information on snow on the ground. Clouds are masked. The product uncertainty for observed land pixels is provided as unbiased RMSE per pixel in the ancillary variable.",
+      "institution": "ENVEO IT GmbH",
+      "source": "TERRA MODIS, Collection 6.1: calibrated radiances 5-min L1B swath data, 1 km (MOD021KM) and geolocation fields 5-min L1A swath data, 1 km (MOD03)",
+      "platform": "TERRA",
+      "sensor": "MODIS",
+      "spatial_resolution": "0.01 degree",
+      "geospatial_lat_min": "-90",
+      "geospatial_lat_max": "90",
+      "geospatial_lon_min": "-180",
+      "geospatial_lon_max": "180",
+      "time_coverage_start": "20100315T000000Z",
+      "time_coverage_end": "20100315T235959Z",
+      "product_version": "4.0",
+      "doi": "10.5285/375ffdb8f0a445e380b4b9548655f5f9",
+      "license": "ESA CCI Data Policy: free and open access",
+      "references": "http://snow-cci.enveo.at/"
+    }
+  }
+}

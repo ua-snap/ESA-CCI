@@ -1,0 +1,388 @@
+{
+  "title": "Plant functional types, 300 m annual, v2.0.81",
+  "theme": "land_cover",
+  "archive_path": "/neodc/esacci/land_cover/data/pft/v2.0.81",
+  "catalogue": null,
+  "manifest": {
+    "n_files": 29,
+    "total_bytes": 51406698396,
+    "total_human": "47.9 GB",
+    "median_file_human": "1.6 GB",
+    "first_year": 1992,
+    "last_year": 2020,
+    "dir_patterns": [
+      "."
+    ],
+    "example_files": [
+      "ESACCI-LC-L4-PFT-Map-300m-P1Y-1992-v2.0.81.nc",
+      "ESACCI-LC-L4-PFT-Map-300m-P1Y-2020-v2.0.81.nc"
+    ]
+  },
+  "remote": true,
+  "sample": {
+    "sample": "https://dap.ceda.ac.uk/neodc/esacci/land_cover/data/pft/v2.0.81/ESACCI-LC-L4-PFT-Map-300m-P1Y-2010-v2.0.81.nc",
+    "dims": {
+      "time": 1,
+      "lat": 64800,
+      "lon": 129600,
+      "bounds": 2
+    },
+    "grid": {
+      "lat": {
+        "size": 64800,
+        "first": 89.99861111111113,
+        "last": -89.9986111111255,
+        "step": -0.002778
+      },
+      "lon": {
+        "size": 129600,
+        "first": -179.9986111111111,
+        "last": 179.9986111111399,
+        "step": 0.002778
+      }
+    },
+    "time_in_sample": [
+      "2010-01-01T00:00:00",
+      "2010-01-01T00:00:00"
+    ],
+    "crs": {
+      "note": "no grid_mapping variable; regular lat/lon assumed"
+    },
+    "variables": [
+      {
+        "name": "WATER",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "Water",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": null,
+        "flag_meanings": ""
+      },
+      {
+        "name": "BARE",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "Bare",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": null,
+        "flag_meanings": ""
+      },
+      {
+        "name": "BUILT",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "Built",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": null,
+        "flag_meanings": ""
+      },
+      {
+        "name": "GRASS-MAN",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "Managed grasses",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": null,
+        "flag_meanings": ""
+      },
+      {
+        "name": "GRASS-NAT",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "Natural grasses",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": null,
+        "flag_meanings": ""
+      },
+      {
+        "name": "SHRUBS-BD",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "Broadleaved deciduous shrubs",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": null,
+        "flag_meanings": ""
+      },
+      {
+        "name": "SHRUBS-BE",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "Broadleaved evergreen shrubs",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": null,
+        "flag_meanings": ""
+      },
+      {
+        "name": "SHRUBS-ND",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "Needleleaved deciduous shrubs",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": null,
+        "flag_meanings": ""
+      },
+      {
+        "name": "SHRUBS-NE",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "Needleleaved evergreen shrubs",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": null,
+        "flag_meanings": ""
+      },
+      {
+        "name": "WATER_INLAND",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "Inland Water",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": null,
+        "flag_meanings": ""
+      },
+      {
+        "name": "SNOWICE",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "Permanent snow and ice",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": null,
+        "flag_meanings": ""
+      },
+      {
+        "name": "TREES-BD",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "Broadleaved deciduous trees",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": null,
+        "flag_meanings": ""
+      },
+      {
+        "name": "TREES-BE",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "Broadleaved evergreen trees",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": null,
+        "flag_meanings": ""
+      },
+      {
+        "name": "TREES-ND",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "Needleleaved deciduous trees",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": null,
+        "flag_meanings": ""
+      },
+      {
+        "name": "TREES-NE",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "Needleleaved evergreen trees",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": null,
+        "flag_meanings": ""
+      },
+      {
+        "name": "LAND",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "Land",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": null,
+        "flag_meanings": ""
+      },
+      {
+        "name": "WATER_OCEAN",
+        "dims": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dtype": "int8",
+        "units": "",
+        "long_name": "Oceanic water",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": null,
+        "flag_meanings": ""
+      },
+      {
+        "name": "lat_bounds",
+        "dims": [
+          "lat",
+          "bounds"
+        ],
+        "dtype": "float64",
+        "units": "",
+        "long_name": "",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": null,
+        "flag_meanings": ""
+      },
+      {
+        "name": "lon_bounds",
+        "dims": [
+          "lon",
+          "bounds"
+        ],
+        "dtype": "float64",
+        "units": "",
+        "long_name": "",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": null,
+        "flag_meanings": ""
+      },
+      {
+        "name": "time_bounds",
+        "dims": [
+          "time",
+          "bounds"
+        ],
+        "dtype": "datetime64[ns]",
+        "units": "",
+        "long_name": "",
+        "standard_name": "",
+        "scale_factor": null,
+        "add_offset": null,
+        "fill_value": null,
+        "flag_meanings": ""
+      }
+    ],
+    "global_attrs": {
+      "title": "ESA CCI Land Cover Project: Maps of Plant Functional Type Fractional Cover",
+      "summary": "This dataset contains the global plant functional type fractional cover maps of the ESA Medium Resolution CCI Land Cover project",
+      "institution": "Universite catholique de Louvain, UCLouvain-Geomatics (Belgium)",
+      "source": "ESA CCI land cover maps, auxiliary derived satellite data products",
+      "spatial_resolution": "300m",
+      "geospatial_lat_min": "-90.00000000001438",
+      "geospatial_lat_max": "90.0",
+      "geospatial_lon_min": "-180",
+      "geospatial_lon_max": "180",
+      "time_coverage_start": "20100101",
+      "time_coverage_end": "20101231",
+      "product_version": "2.0.81",
+      "doi": "10.5285/313854aedcb04a5eb56f711401a87396",
+      "license": "CC BY 4.0 - https://creativecommons.org/licenses/by/4.0/ ",
+      "references": "https://maps.elie.ucl.ac.be/CCI/viewer/download.php, https://climate.esa.int/fr/projects/land-cover/about/, https://catalogue.ceda.ac.uk/uuid/26a0f46c95ee4c29b5c650b129aab788"
+    }
+  }
+}
