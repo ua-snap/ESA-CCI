@@ -48,6 +48,7 @@ All data are open access from the [CEDA archive](https://data.ceda.ac.uk/neodc/e
 
 Documentation:
 - [Product User Guide v5.0](https://climate.esa.int/documents/3107/CCI_PERMA_PUG_v5.0.pdf) (15 Sep 2025, describes CRDPv4 / file version 5)
+- [Algorithm Theoretical Basis Document (ATBD) v5.0](https://climate.esa.int/media/documents/CCI_PERMA_D2.2_ATBD_v5.0.pdf) (15 Nov 2024: CryoGrid setup, ensemble, uncertainty)
 - [CRDP v5.0 description](https://climate.esa.int/documents/3106/CCI_PERMA_D3.2_CRDP_5.0.pdf)
 - Older PUGs (v4.0, v4.1) in the [CEDA docs folder](https://dap.ceda.ac.uk/neodc/esacci/permafrost/docs/)
 - [Project page](https://climate.esa.int/en/projects/permafrost/)
@@ -194,6 +195,47 @@ Sizes use binary units, matching the CEDA catalogue (1 GB = 1024³ bytes).
 | PFR | `PFR_uncertainty` | Uncertainty of permafrost fraction | % | uint8, fill 255 |
 
 All files also include `lat`, `lon`, `time` (hours since 1950-01-01) and the scalar `spatial_ref`.
+
+### What the "spatial uncertainty" layers mean
+
+The `*_uncertainty` layers are **not measurement or retrieval errors**. They describe how much the variable is
+expected to vary *within* a 1 km pixel. They come from the way CryoGrid is run (ATBD v5.0 §4.1.2, §4.3, §7):
+
+1. **A small model ensemble per pixel.** Each 1 km pixel is simulated as **7 ensemble members**, each standing for an
+   equal-area part of the pixel.
+   - Each member gets a ground stratigraphy matching the pixel's sub-pixel land cover fractions from Land Cover CCI.
+     Classes with small fractions may be left out because there are only 7 members.
+   - Each member's snowfall is scaled by a lognormal distribution with a land-cover-dependent coefficient of variation
+     (after Liston 2004). This mimics wind-driven snow-depth variability, which drives small-scale ground temperature
+     differences, especially in tundra.
+   - All members share the same 1 km surface temperature forcing, so sub-pixel variability in LST (slope, aspect) is
+     not represented.
+2. **Ground temperature and ALT uncertainty** are the **standard deviation across the 7 members** of each year's mean
+   ground temperature (per depth) or maximum thaw depth. The ATBD describes this as "the expected spread in ground
+   temperatures when measuring at a random location within a pixel". Climate models typically use one realization
+   per grid cell, so this spread is meant to stand in for sub-grid uncertainty.
+3. **PFR** is the share of members with permafrost: a member counts as permafrost if the first model cell below the
+   seasonal thaw layer stays below 0 °C all year. With 7 members, PFR can only be 0, 14, 29, 43, 57, 71, 86 or 100%.
+   I confirmed this in the Alaska files: apart from a few hundred edge pixels, every value is one of these.
+   The ATBD maps 7/7 to continuous, 4–6 to discontinuous, 1–3 to sporadic and 0 to permafrost-free.
+4. **`PFR_uncertainty` is not documented** beyond the label "uncertainty of permafrost fraction". Observed in the
+   2020 Alaska file:
+   - it takes values in steps of about 7% (1/14) up to a maximum of 43%;
+   - it is usually highest at intermediate PFR;
+   - about 40% of pixels with PFR = 0 or 100% still carry a non-zero value;
+   - it correlates moderately (r ≈ 0.37) with the 2019→2020 change in PFR.
+
+   That pattern suggests it reflects temporal instability of the per-member permafrost state rather than a simple
+   function of PFR, but this is **unconfirmed**. Treat it as qualitative.
+
+**What it does not include:** errors in the forcing (MODIS LST, ERA5), the model physics, or the stratigraphy itself.
+The ATBD says uncertainty "mainly relies on the spread … within the model ensemble", covering two sources: land cover
+and snow variability. Propagating input-data uncertainties was judged not meaningful at high latitudes.
+Snow-related spread is larger in continental, cold-winter climates than in maritime ones, which matches the high
+ground-temperature uncertainty on the North Slope and in the Yukon in the maps below.
+
+Ensemble size: ATBD v5.0 §4.3 says 7 members, while §8 (computational cost) says "five ensemble members per grid
+cell". The PFR value set (multiples of 1/7) shows the v5.0 files used 7. Source: [Permafrost_cci ATBD v5.0](https://climate.esa.int/media/documents/CCI_PERMA_D2.2_ATBD_v5.0.pdf) (15 Nov 2024).
 
 ### Quirks found during EDA
 
@@ -377,6 +419,7 @@ resolution, with different legends. The overlaps are conceptual and indirect:
 |---|---|
 | ABoVE | NASA Arctic-Boreal Vulnerability Experiment |
 | ALT | Active layer thickness: maximum annual seasonal thaw depth above permafrost (m) |
+| ATBD | Algorithm Theoretical Basis Document |
 | AVHRR | Advanced Very High Resolution Radiometer (NOAA / MetOp satellites) |
 | C3S / CDS | Copernicus Climate Change Service / its Climate Data Store |
 | CCI | ESA Climate Change Initiative |
